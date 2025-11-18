@@ -103,16 +103,11 @@ const LoginScreen = () => {
     }
   };
 
-  // TODO: Change this condition based on EE check
-  // Show SSO login button only if installation URL contains app.chatwoot.com
-  const showSsoLogin = installationUrl.includes('app.chatwoot.com');
+  // SSO login is disabled for meu.bot
+  const showSsoLogin = false;
 
   const openResetPassword = () => {
     navigation.navigate('ResetPassword' as never);
-  };
-
-  const openConfigInstallationURL = () => {
-    navigation.navigate('ConfigureURL' as never);
   };
 
   const onChangeLanguage = (locale: string) => {
@@ -282,13 +277,6 @@ const LoginScreen = () => {
             handlePress={handleSubmit(onSubmit)}
           />
 
-          <Pressable
-            style={tailwind.style('flex-row justify-center items-center mt-6')}
-            onPress={openConfigInstallationURL}>
-            <Animated.Text style={tailwind.style('text-sm text-gray-900')}>
-              {i18n.t('LOGIN.CHANGE_URL')}
-            </Animated.Text>
-          </Pressable>
           <Pressable
             style={tailwind.style('flex-row justify-center items-center mt-4')}
             onPress={() => languagesModalSheetRef.current?.present()}>

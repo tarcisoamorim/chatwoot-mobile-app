@@ -30,7 +30,7 @@ const ConfigURLScreen = () => {
     formState: { errors },
   } = useForm({
     defaultValues: {
-      url: baseUrl ? baseUrl : appName === 'Chatwoot' ? 'app.chatwoot.com' : '',
+      url: 'desk.meu.bot',
     },
   });
 
@@ -39,10 +39,9 @@ const ConfigURLScreen = () => {
   }, [dispatch]);
 
   const onSubmit = async (data: FormData) => {
-    const { url } = data;
-    if (url) {
-      dispatch(settingsActions.setInstallationUrl(url));
-    }
+    // URL is fixed to desk.meu.bot
+    const url = 'desk.meu.bot';
+    dispatch(settingsActions.setInstallationUrl(url));
   };
 
   return (
@@ -94,6 +93,7 @@ const ConfigURLScreen = () => {
                   placeholderTextColor={tailwind.color('text-gray-900')}
                   keyboardType="email-address"
                   autoCapitalize="none"
+                  editable={false}
                 />
                 {errors.url && (
                   <Animated.Text style={tailwind.style('text-ruby-900')}>

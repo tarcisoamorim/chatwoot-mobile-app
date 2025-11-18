@@ -3,9 +3,9 @@
 
 ---
 
-# Chatwoot
+# meu.bot Mobile App
 
-Mobile app for chatwoot platform. Built with React Native and Expo.
+Mobile app for meu.bot platform. Built with React Native and Expo.
 
 <p>
    <a href="https://github.com/react-native-community/releases/blob/master/CHANGELOG.md"><img src="https://img.shields.io/github/package-json/dependency-version/chatwoot/chatwoot-mobile-app/react-native?color=%2361dafb" alt="Project Dependencies"></a>
@@ -16,7 +16,7 @@ Mobile app for chatwoot platform. Built with React Native and Expo.
  <img src="https://img.shields.io/github/license/chatwoot/chatwoot-mobile-app" alt="License">
 </p>
 
-- **Supported Chatwoot version:** 3.13.0+
+- **Server URL:** desk.meu.bot
 - **Supported iOS versions**: 13.4+
 - **Supported Android versions**: 6.0+
 
@@ -64,4 +64,4 @@ If you wish to contribute, please take a quick look at the [CONTRIBUTING.md](htt
 
 If there's anything you'd like to chat about, please feel free to join our [Discord](https://discord.gg/cJXdrwS) chat!
 
-_Chatwoot_ &copy; 2017-2025, Chatwoot Inc - Released under the MIT License.
+_meu.bot_ - Custom mobile app based on Chatwoot. Released under the MIT License.

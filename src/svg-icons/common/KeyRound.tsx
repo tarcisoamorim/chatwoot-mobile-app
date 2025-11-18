@@ -3,7 +3,7 @@ import Svg, { Path } from 'react-native-svg';
 
 import { IconProps } from '../../types';
 
-export const KeyRoundIcon = ({ stroke = '#858585' }: IconProps): JSX.Element => {
+export const KeyRoundIcon = ({ stroke = '#858585' }: IconProps): React.ReactElement => {
   return (
     <Svg width="40" height="40" viewBox="0 0 40 40" fill="none">
       <Path

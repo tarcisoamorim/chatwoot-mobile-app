@@ -1,7 +1,7 @@
 import React from 'react';
 import Svg, { ClipPath, Defs, G, Path, Rect } from 'react-native-svg';
 
-export const InfoIcon = (): JSX.Element => {
+export const InfoIcon = (): React.ReactElement => {
   return (
     <Svg width="100%" height="100%" viewBox="0 0 21 28" fill="none">
       <G clipPath="url(#clip0_2165_87542)">

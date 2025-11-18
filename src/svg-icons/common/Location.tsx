@@ -1,7 +1,7 @@
 import React from 'react';
 import { Path, Svg } from 'react-native-svg';
 
-export const LocationIcon = (): JSX.Element => {
+export const LocationIcon = (): React.ReactElement => {
   return (
     <Svg width="24" height="24" viewBox="0 0 24 24" fill="none">
       <Path
@@ -12,7 +12,7 @@ export const LocationIcon = (): JSX.Element => {
   );
 };
 
-export const MapIcon = ({ fill = '#838383' }: { fill: string }): JSX.Element => {
+export const MapIcon = ({ fill = '#838383' }: { fill: string }): React.ReactElement => {
   return (
     <Svg width="100%" height="100%" viewBox="0 0 24 24">
       <Path

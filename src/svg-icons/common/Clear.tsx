@@ -3,7 +3,7 @@ import Svg, { Path } from 'react-native-svg';
 
 import { IconProps } from '../../types';
 
-export const ClearIcon = ({ stroke = '#858585' }: IconProps): JSX.Element => {
+export const ClearIcon = ({ stroke = '#858585' }: IconProps): React.ReactElement => {
   return (
     <Svg width="24" height="24" viewBox="0 0 24 24" fill="none">
       <Path

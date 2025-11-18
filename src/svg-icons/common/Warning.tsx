@@ -10,7 +10,7 @@ type WarningIconProps = IconProps & {
 export const WarningIcon = ({
   stroke = '#800',
   renderSecondTick = true,
-}: WarningIconProps): JSX.Element => {
+}: WarningIconProps): React.ReactElement => {
   return (
     <Svg width="100%" height="100%" viewBox="0 0 24 24">
       <Path

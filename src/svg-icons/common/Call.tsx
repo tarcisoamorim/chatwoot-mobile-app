@@ -1,7 +1,7 @@
 import React from 'react';
 import { Path, Svg } from 'react-native-svg';
 
-export const CallIcon = (): JSX.Element => {
+export const CallIcon = (): React.ReactElement => {
   return (
     <Svg width="24" height="24" viewBox="0 0 24 24" fill="none">
       <Path

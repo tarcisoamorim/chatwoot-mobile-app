@@ -6,7 +6,7 @@ import { IconProps } from '../../types';
 export const AddParticipant = ({
   stroke = '#858585',
   strokeWidth = 1.5,
-}: IconProps): JSX.Element => {
+}: IconProps): React.ReactElement => {
   return (
     <Svg width="100%" height="100%" viewBox="0 0 24 24" fill="none">
       <Path

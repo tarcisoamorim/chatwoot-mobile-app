@@ -31,8 +31,9 @@ export const selectWebSocketUrl = createSelector(selectSettings, settings => set
 
 export const selectTheme = createSelector(selectSettings, settings => settings.theme);
 
+// Updated for meu.bot - always true since we use desk.meu.bot
 export const selectIsChatwootCloud = createSelector(selectSettings, settings =>
-  settings.installationUrl.includes('app.chatwoot.com'),
+  settings.installationUrl.includes('desk.meu.bot'),
 );
 
 export const selectChatwootVersion = createSelector(selectSettings, settings => settings.version);

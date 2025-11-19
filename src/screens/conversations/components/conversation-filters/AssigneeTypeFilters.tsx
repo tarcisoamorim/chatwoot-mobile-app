@@ -7,7 +7,7 @@ import { TickIcon } from '@/svg-icons';
 import { tailwind } from '@/theme';
 import { AssigneeTypes } from '@/types';
 import { useHaptic } from '@/utils';
-import { BottomSheetHeader, Icon } from '@/components-next';
+import { BottomSheetHeader, Icon } from '@/components';
 import { selectFilters, setFilters } from '@/store/conversation/conversationFilterSlice';
 import { useAppDispatch, useAppSelector } from '@/hooks';
 import i18n from '@/i18n';

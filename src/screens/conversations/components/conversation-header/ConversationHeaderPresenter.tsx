@@ -1,7 +1,7 @@
 import React from 'react';
 import { Pressable, Text, ViewStyle } from 'react-native';
 import Animated, { AnimatedStyle } from 'react-native-reanimated';
-import { Icon } from '@/components-next/common';
+import { Icon } from '@/components/common';
 import { CheckedIcon, CloseIcon, FilterIcon, UncheckedIcon } from '@/svg-icons';
 import { tailwind } from '@/theme';
 import i18n from '@/i18n';

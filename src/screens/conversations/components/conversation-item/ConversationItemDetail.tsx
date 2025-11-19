@@ -4,14 +4,14 @@ import { Dimensions, ImageURISource, Text } from 'react-native';
 import { LinearTransition } from 'react-native-reanimated';
 import { isEqual } from 'lodash';
 
-import { Avatar } from '@/components-next/common';
-import { AnimatedNativeView, NativeView } from '@/components-next/native-components';
+import { Avatar } from '@/components/common';
+import { AnimatedNativeView, NativeView } from '@/components/native-components';
 import { tailwind } from '@/theme';
 import { Agent, Conversation, ConversationAdditionalAttributes, Label, Message } from '@/types';
 
 import { ConversationId } from './ConversationId';
 import { ConversationLastMessage } from './ConversationLastMessage';
-import { PriorityIndicator, ChannelIndicator } from '@/components-next/list-components';
+import { PriorityIndicator, ChannelIndicator } from '@/components/list-components';
 import { UnreadIndicator } from './UnreadIndicator';
 import { SLAIndicator } from './SLAIndicator';
 import { LabelIndicator } from './LabelIndicator';

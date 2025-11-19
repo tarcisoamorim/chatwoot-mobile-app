@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 
 import Animated, {
   interpolate,
@@ -61,22 +61,27 @@ export const MessagesList = ({
     FlashList<Message | { date: string }>
   >;
 
-  const handleRender = ({ item, index }: { item: Message | { date: string }; index: number }) => {
-    if ('date' in item) {
-      return <DateSection item={item} />;
-    }
+  // Memoize render function to preserve FlashList's internal optimizations
+  // Without this, FlashList recreates all cells on every parent re-render
+  const handleRender = useCallback(
+    ({ item, index }: { item: Message | { date: string }; index: number }) => {
+      if ('date' in item) {
+        return <DateSection item={item} />;
+      }
 
-    return (
-      <MessageComponent
-        item={item}
-        index={index}
-        isEmailInbox={isEmailInbox}
-        currentUserId={currentUserId}
-      />
-    );
-    // TODO: Deprecate this after the new message item is ready
-    // return <MessageItemContainer item={item} index={index} />;
-  };
+      return (
+        <MessageComponent
+          item={item}
+          index={index}
+          isEmailInbox={isEmailInbox}
+          currentUserId={currentUserId}
+        />
+      );
+      // TODO: Deprecate this after the new message item is ready
+      // return <MessageItemContainer item={item} index={index} />;
+    },
+    [isEmailInbox, currentUserId],
+  );
 
   const animatedFlashlistStyle = useAnimatedStyle(() => {
     return {

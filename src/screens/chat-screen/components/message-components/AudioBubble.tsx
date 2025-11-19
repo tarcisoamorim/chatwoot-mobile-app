@@ -12,8 +12,8 @@ import {
 
 import { tailwind } from '@/theme';
 import { IconProps } from '@/types';
-import { Icon, Slider } from '@/components-next/common';
-import { Spinner } from '@/components-next/spinner';
+import { Icon, Slider } from '@/components/common';
+import { Spinner } from '@/components/spinner';
 import { pausePlayer, resumePlayer, seekTo, startPlayer, stopPlayer } from '../audio-recorder';
 import { MESSAGE_VARIANTS } from '@/constants';
 import { useDispatch } from 'react-redux';

@@ -12,7 +12,7 @@ import { InboxItem } from './InboxItem';
 import { formatRelativeTime } from '@/utils/dateTimeUtils';
 import { formatTimeToShortForm } from '@/utils/dateTimeUtils';
 import { tailwind } from '@/theme';
-import { Icon, Swipeable } from '@/components-next';
+import { Icon, Swipeable } from '@/components';
 import { selectInboxById } from '@/store/inbox/inboxSelectors';
 import i18n from '@/i18n';
 import { showToast } from '@/utils/toastUtils';

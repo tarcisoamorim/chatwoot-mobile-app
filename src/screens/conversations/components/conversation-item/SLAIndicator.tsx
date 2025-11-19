@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Text } from 'react-native';
 
 import { tailwind } from '@/theme';
-import { NativeView } from '@/components-next/native-components';
+import { NativeView } from '@/components/native-components';
 import { SlaMissedIcon } from '@/svg-icons';
 import { SLA, SLAStatus } from '@/types/common/SLA';
 import { evaluateSLAStatus } from '@chatwoot/utils';

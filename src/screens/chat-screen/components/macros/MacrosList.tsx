@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import Animated from 'react-native-reanimated';
 import { BottomSheetModal, BottomSheetScrollView } from '@gorhom/bottom-sheet';
 
-import { BottomSheetBackdrop } from '@/components-next';
+import { BottomSheetBackdrop } from '@/components';
 import i18n from '@/i18n';
 import { useRefsContext } from '@/context';
 import { tailwind } from '@/theme';

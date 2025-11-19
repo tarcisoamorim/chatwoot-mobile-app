@@ -5,7 +5,7 @@ import { FileErrorIcon } from '@/svg-icons';
 import { differenceInHours } from 'date-fns';
 import { tailwind } from '@/theme';
 import { Message } from '@/types';
-import { Icon, Spinner } from '@/components-next';
+import { Icon, Spinner } from '@/components';
 import { ReplyMessageBubble } from './ReplyMessageBubble';
 
 import { ImageBubbleContainer } from './ImageBubble';

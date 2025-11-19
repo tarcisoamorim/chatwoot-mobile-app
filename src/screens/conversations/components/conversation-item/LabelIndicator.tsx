@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Text } from 'react-native';
 import { tailwind } from '@/theme';
-import { AnimatedNativeView, NativeView } from '@/components-next/native-components';
+import { AnimatedNativeView, NativeView } from '@/components/native-components';
 import { Label } from '@/types';
 
 interface LabelState {

@@ -4,7 +4,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 import Animated from 'react-native-reanimated';
 import { BottomSheetModal, useBottomSheetSpringConfigs } from '@gorhom/bottom-sheet';
 
-import { BottomSheetBackdrop, Button } from '@/components-next';
+import { BottomSheetBackdrop, Button } from '@/components';
 import {
   ConversationBasicActions,
   ConversationLabelActions,

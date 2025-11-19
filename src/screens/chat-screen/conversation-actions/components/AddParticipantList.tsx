@@ -4,7 +4,7 @@ import Animated from 'react-native-reanimated';
 
 import { AddParticipant, Overflow } from '@/svg-icons';
 import { tailwind } from '@/theme';
-import { Avatar, Icon } from '@/components-next';
+import { Avatar, Icon } from '@/components';
 import { Agent } from '@/types';
 import i18n from '@/i18n';
 

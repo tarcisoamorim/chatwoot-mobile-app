@@ -1,7 +1,7 @@
 import React from 'react';
 import Animated, { LinearTransition } from 'react-native-reanimated';
 import { Pressable } from 'react-native';
-import { Icon } from '@/components-next/common';
+import { Icon } from '@/components/common';
 import { SendIcon } from '@/svg-icons';
 import { useScaleAnimation } from '@/utils';
 import { tailwind } from '@/theme';

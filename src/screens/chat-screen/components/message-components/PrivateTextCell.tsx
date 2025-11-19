@@ -4,7 +4,7 @@ import { Animated, Text } from 'react-native';
 import { LockIcon } from '@/svg-icons';
 import { tailwind } from '@/theme';
 import { unixTimestampToReadableTime } from '@/utils';
-import { Icon } from '@/components-next/common';
+import { Icon } from '@/components/common';
 
 import { MarkdownDisplay } from './MarkdownDisplay';
 import { TEXT_MAX_WIDTH } from '@/constants';

@@ -7,7 +7,7 @@ import * as Sentry from '@sentry/react-native';
 import { CaretRight } from '@/svg-icons';
 import { tailwind } from '@/theme';
 import { AttributeListType } from '@/types';
-import { Icon } from '@/components-next/common';
+import { Icon } from '@/components/common';
 import { showToast } from '@/utils/toastUtils';
 
 type AttributeItemProps = {

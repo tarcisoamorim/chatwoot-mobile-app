@@ -7,7 +7,7 @@ import i18n from '@/i18n';
 import { camelCase } from 'lodash';
 import { useAppSelector } from '@/hooks';
 import { getConversationCustomAttributes } from '@/store/custom-attribute/customAttributeSlice';
-import { AttributeList } from '@/components-next';
+import { AttributeList } from '@/components';
 
 const processContactAttributes = (
   attributes: CustomAttribute[],

@@ -13,7 +13,7 @@ import { TEXT_INPUT_CONTAINER_HEIGHT } from '@/constants';
 import { useChatWindowContext } from '@/context';
 import { SendIcon, Trash } from '@/svg-icons';
 import { tailwind } from '@/theme';
-import { Icon } from '@/components-next';
+import { Icon } from '@/components';
 import { PauseIcon, PlayIcon } from '../message-components';
 import { useAppDispatch, useAppSelector } from '@/hooks';
 import {

@@ -7,7 +7,7 @@ import { differenceInHours } from 'date-fns';
 import { tailwind } from '@/theme';
 import { Channel, Message } from '@/types';
 import { unixTimestampToReadableTime } from '@/utils';
-import { Avatar, Icon } from '@/components-next';
+import { Avatar, Icon } from '@/components';
 import { MarkdownDisplay } from './MarkdownDisplay';
 import { MenuOption, MessageMenu } from '../message-menu';
 import { ReplyMessageCell } from './ReplyMessageCell';

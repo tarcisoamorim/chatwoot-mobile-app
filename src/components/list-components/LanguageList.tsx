@@ -6,7 +6,7 @@ import { LANGUAGES } from '@/constants';
 import { TickIcon } from '@/svg-icons';
 import { tailwind } from '@/theme';
 import { useHaptic } from '@/utils';
-import { Icon } from '@/components-next/common';
+import { Icon } from '@/components/common';
 
 export type LanguageItemType = {
   title: string;

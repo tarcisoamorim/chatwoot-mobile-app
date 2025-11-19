@@ -47,13 +47,34 @@ const InboxList = () => {
 
   const dispatch = useAppDispatch();
 
+  // Define fetchNotifications first (no dependencies on other callbacks)
+  const fetchNotifications = useCallback(
+    async (sortOrder: InboxSortTypes, page: number = 1) => {
+      dispatch(notificationActions.fetchNotifications({ page, sort_order: sortOrder }));
+    },
+    [dispatch],
+  );
+
+  // clearAndFetchNotifications depends on fetchNotifications
+  const clearAndFetchNotifications = useCallback(async (sortOrder: InboxSortTypes) => {
+    setPageNumber(1);
+    await dispatch(resetNotifications());
+    fetchNotifications(sortOrder);
+  }, [dispatch, fetchNotifications]);
+
+  // Re-fetch notifications when sort order changes
   useEffect(() => {
     if (previousSortOrder.current !== sortOrder) {
       previousSortOrder.current = sortOrder;
       clearAndFetchNotifications(sortOrder);
     }
+  }, [sortOrder, clearAndFetchNotifications]);
+
+  // Fetch notifications on mount
+  useEffect(() => {
+    clearAndFetchNotifications(sortOrder);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [sortOrder]);
+  }, []);
 
   // eslint-disable-next-line react/display-name
   const ListFooterComponent = React.memo(() => {
@@ -68,26 +89,6 @@ const InboxList = () => {
       </Animated.View>
     );
   });
-
-  useEffect(() => {
-    clearAndFetchNotifications(sortOrder);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  const clearAndFetchNotifications = useCallback(async (sortOrder: InboxSortTypes) => {
-    setPageNumber(1);
-    await dispatch(resetNotifications());
-    fetchNotifications(sortOrder);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  const fetchNotifications = useCallback(
-    async (sortOrder: InboxSortTypes, page: number = 1) => {
-      dispatch(notificationActions.fetchNotifications({ page, sort_order: sortOrder }));
-    },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [],
-  );
 
   const onChangePageNumber = () => {
     const nextPageNumber = pageNumber + 1;

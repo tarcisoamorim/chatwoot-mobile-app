@@ -6,7 +6,7 @@ import { BottomSheetTextInput } from '@gorhom/bottom-sheet';
 import { SearchIcon } from '@/svg-icons';
 import { tailwind } from '@/theme';
 import { RenderPropType } from '@/types';
-import { Spinner } from '@/components-next/spinner';
+import { Spinner } from '@/components/spinner';
 import { Icon } from '../icon';
 
 interface SearchBarProps extends TextInputProps {

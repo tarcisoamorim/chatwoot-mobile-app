@@ -11,7 +11,7 @@ import {
 import { useBottomSheetSpringConfigs } from '@gorhom/bottom-sheet';
 
 import { UpdateAssignee } from '../UpdateAssignee';
-import { BottomSheetBackdrop } from '@/components-next/common/bottomsheet/BottomSheetBackdrop';
+import { BottomSheetBackdrop } from '@/components/common/bottomsheet/BottomSheetBackdrop';
 import { useRefsContext, RefsProvider } from '@/context/RefsContext';
 import { tailwind } from '@/theme';
 

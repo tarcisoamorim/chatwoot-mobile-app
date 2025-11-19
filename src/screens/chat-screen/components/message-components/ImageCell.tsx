@@ -5,7 +5,7 @@ import { ImageBackground } from 'expo-image';
 import { tailwind } from '@/theme';
 import { Channel, Message, MessageStatus, UnixTimestamp } from '@/types';
 import { unixTimestampToReadableTime } from '@/utils';
-import { Avatar } from '@/components-next/common';
+import { Avatar } from '@/components/common';
 import { MenuOption, MessageMenu } from '../message-menu';
 import { MESSAGE_TYPES } from '@/constants';
 import { DeliveryStatus } from './DeliveryStatus';

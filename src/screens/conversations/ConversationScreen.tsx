@@ -23,7 +23,7 @@ import {
   AssigneeTypeFilters,
 } from './components';
 
-import { ActionTabs, BottomSheetBackdrop, BottomSheetWrapper } from '@/components-next';
+import { ActionTabs, BottomSheetBackdrop, BottomSheetWrapper } from '@/components';
 
 import { EmptyStateIcon } from '@/svg-icons';
 import {
@@ -114,13 +114,13 @@ const ConversationList = () => {
     AsyncStorage.removeItem(LAST_ACTIVE_TIMESTAMP_KEY);
   }, []);
 
+  // Re-fetch conversations when filters change
   useEffect(() => {
     if (previousFilters.current !== filters) {
       previousFilters.current = filters;
       clearAndFetchConversations(filters);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [filters]);
+  }, [filters, clearAndFetchConversations]);
 
   useEffect(() => {
     dismissAll();
@@ -134,8 +134,7 @@ const ConversationList = () => {
     await dispatch(clearAllContacts());
     await dispatch(clearAssignableAgents());
     fetchConversations(filters);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [dispatch, fetchConversations]);
 
   const ListFooterComponent = () => {
     if (isAllConversationsFetched) return null;
@@ -204,8 +203,7 @@ const ConversationList = () => {
 
       dispatch(conversationActions.fetchConversations(conversationFilters));
     },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [],
+    [dispatch],
   );
 
   const onChangePageNumber = () => {

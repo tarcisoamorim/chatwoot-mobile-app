@@ -1,7 +1,7 @@
 import React from 'react';
 import { Pressable } from 'react-native';
 import Animated from 'react-native-reanimated';
-import { Avatar, Icon } from '@/components-next';
+import { Avatar, Icon } from '@/components';
 import { CaretRight, UnassignedIcon } from '@/svg-icons';
 import { tailwind } from '@/theme';
 import { Agent } from '@/types';

@@ -2,8 +2,8 @@
 import React, { memo } from 'react';
 import { LinearTransition } from 'react-native-reanimated';
 
-import { Icon } from '@/components-next/common';
-import { AnimatedNativeView } from '@/components-next/native-components';
+import { Icon } from '@/components/common';
+import { AnimatedNativeView } from '@/components/native-components';
 import { CheckedIcon, UncheckedIcon } from '@/svg-icons';
 import { tailwind } from '@/theme';
 

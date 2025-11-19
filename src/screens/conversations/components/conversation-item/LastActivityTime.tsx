@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Text } from 'react-native';
 
 import { tailwind } from '@/theme';
-import { NativeView } from '@/components-next/native-components';
+import { NativeView } from '@/components/native-components';
 import { formatTimeToShortForm, formatRelativeTime } from '@/utils/dateTimeUtils';
 
 // Constants from Vue component

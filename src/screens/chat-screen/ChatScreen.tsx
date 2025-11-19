@@ -27,7 +27,7 @@ import ActionBottomSheet from '@/navigation/tabs/ActionBottomSheet';
 import { conversationActions } from '@/store/conversation/conversationActions';
 import { TAB_BAR_HEIGHT } from '@/constants';
 import { ErrorIcon } from '@/svg-icons';
-import { Button } from '@/components-next';
+import { Button } from '@/components';
 import { ActivityIndicator, Pressable } from 'react-native';
 import i18n from '@/i18n';
 import { StackActions, useNavigation } from '@react-navigation/native';
@@ -104,18 +104,27 @@ const ChatScreen = (props: ChatScreenProps) => {
     dispatch(conversationActions.fetchConversation(conversationId));
   };
 
+  // Helper to safely format error messages
+  const getErrorMessage = (): string => {
+    if (!conversationError) return i18n.t('CONVERSATION.NOT_FOUND.TITLE');
+    if (typeof conversationError === 'string') return conversationError;
+    if (conversationError instanceof Error) return conversationError.message;
+    return i18n.t('CONVERSATION.NOT_FOUND.TITLE');
+  };
+
+  // Fetch conversation if not loaded - re-fetch if conversation becomes undefined
   useEffect(() => {
     if (!conversation) {
-      fetchConversation();
+      dispatch(conversationActions.fetchConversation(conversationId));
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [conversation, conversationId, dispatch]);
 
   useEffect(() => {
     dispatch(macroActions.fetchMacros());
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // Mark notification as read when route params change
   useEffect(() => {
     if (primaryActorId && primaryActorType) {
       const payload: MarkAsReadPayload = {
@@ -124,9 +133,7 @@ const ChatScreen = (props: ChatScreenProps) => {
       };
       dispatch(notificationActions.markAsRead(payload));
     }
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [primaryActorId, primaryActorType, dispatch]);
 
   const handleBackPress = () => {
     if (navigation.canGoBack()) {
@@ -172,7 +179,7 @@ const ChatScreen = (props: ChatScreenProps) => {
               style={tailwind.style(
                 'text-2xl font-inter-420-20 text-gray-950 font-inter-semibold-20',
               )}>
-              {conversationError || i18n.t('CONVERSATION.NOT_FOUND.TITLE')}
+              {getErrorMessage()}
             </Animated.Text>
             <Animated.Text
               style={tailwind.style(

@@ -7,13 +7,13 @@ import { useChatWindowContext, useRefsContext } from '@/context';
 import { LabelTag } from '@/svg-icons';
 import { tailwind } from '@/theme';
 import { Label } from '@/types';
-import { BottomSheetBackdrop, Icon, SearchBar } from '@/components-next';
+import { BottomSheetBackdrop, Icon, SearchBar } from '@/components';
 import { useAppSelector } from '@/hooks';
 import { filterLabels } from '@/store/label/labelSelectors';
 import { useAppDispatch } from '@/hooks';
 import { conversationActions } from '@/store/conversation/conversationActions';
 
-import { LabelCell, LabelItem } from '@/components-next/label-section';
+import { LabelCell, LabelItem } from '@/components/label-section';
 
 type LabelStackProps = {
   filteredLabels: Label[];

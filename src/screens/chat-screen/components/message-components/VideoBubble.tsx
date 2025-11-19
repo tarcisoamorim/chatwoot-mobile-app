@@ -10,7 +10,7 @@ import {
 } from 'expo-av';
 import { Image } from 'expo-image';
 import { tailwind } from '@/theme';
-import { Spinner } from '@/components-next/spinner';
+import { Spinner } from '@/components/spinner';
 
 type VideoBubbleProps = {
   videoSrc: string;

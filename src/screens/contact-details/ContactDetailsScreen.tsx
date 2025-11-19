@@ -24,7 +24,7 @@ import {
   ContactBasicActions,
   ContactMetaInformation,
 } from './components';
-import { AttributeList } from '@/components-next';
+import { AttributeList } from '@/components';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { TabBarExcludedScreenParamList } from '@/navigation/tabs/AppTabs';
 import { selectConversationById } from '@/store/conversation/conversationSelectors';
@@ -157,12 +157,12 @@ const ContactDetailsScreen = (props: ContactDetailsScreenProps) => {
 
   const hasContactCustomAttributes = usedContactCustomAttributes.length > 0;
 
+  // Fetch contact labels when contactId changes
   useEffect(() => {
     if (contactId) {
       dispatch(contactLabelActions.getContactLabels({ contactId }));
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [contactId, dispatch]);
 
   const socialMediaDetails = allSocialMediaProfiles
     .filter(profile => socialMediaProfiles?.[profile.key as keyof typeof socialMediaProfiles])

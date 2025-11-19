@@ -2,9 +2,9 @@ import React from 'react';
 
 import { tailwind } from '@/theme';
 import { ConversationPriority } from '@/types';
-import { NativeView } from '@/components-next/native-components';
+import { NativeView } from '@/components/native-components';
 import { HighIcon, MediumIcon, LowIcon, UrgentIcon } from '@/svg-icons/priority-icons';
-import { Icon } from '@/components-next/common/icon';
+import { Icon } from '@/components/common/icon';
 
 type PriorityIndicatorProps = {
   priority: ConversationPriority;

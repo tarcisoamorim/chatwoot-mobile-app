@@ -12,8 +12,8 @@ import {
 import { tailwind } from '@/theme';
 import { Channel, IconProps, Message, MessageStatus, UnixTimestamp } from '@/types';
 import { unixTimestampToReadableTime } from '@/utils';
-import { Avatar, Icon, Slider } from '@/components-next/common';
-import { Spinner } from '@/components-next/spinner';
+import { Avatar, Icon, Slider } from '@/components/common';
+import { Spinner } from '@/components/spinner';
 import { pausePlayer, resumePlayer, seekTo, startPlayer, stopPlayer } from '../audio-recorder';
 import { MenuOption, MessageMenu } from '../message-menu';
 import { MESSAGE_TYPES } from '@/constants';

@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { BottomSheetModal, useBottomSheetSpringConfigs } from '@gorhom/bottom-sheet';
 import tailwind from 'twrnc';
-import { BottomSheetBackdrop } from '@/components-next';
+import { BottomSheetBackdrop } from '@/components';
 import { useAppDispatch, useAppSelector } from '@/hooks';
 import {
   resetActionState,

@@ -3,7 +3,7 @@ import { Pressable, View } from 'react-native';
 import Animated, { FadeIn } from 'react-native-reanimated';
 import { BottomSheetScrollView } from '@gorhom/bottom-sheet';
 
-import { Icon, Spinner } from '@/components-next';
+import { Icon, Spinner } from '@/components';
 import i18n from '@/i18n';
 import { ChevronLeft } from '@/svg-icons';
 import { tailwind } from '@/theme';

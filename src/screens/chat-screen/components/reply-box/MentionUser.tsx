@@ -3,7 +3,7 @@ import { Pressable } from 'react-native';
 import Animated from 'react-native-reanimated';
 import { tailwind } from '@/theme';
 import { Agent } from '@/types';
-import { Avatar } from '@/components-next';
+import { Avatar } from '@/components';
 type MentionUserProps = {
   agent: Agent;
   lastItem: boolean;

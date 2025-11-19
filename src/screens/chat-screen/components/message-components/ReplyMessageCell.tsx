@@ -7,7 +7,7 @@ import { AttachFileIcon, CameraIcon, VideoCall, VoiceNote } from '@/svg-icons';
 import { tailwind } from '@/theme';
 import { Message } from '@/types';
 import { isMarkdown } from '@/utils';
-import { Icon } from '@/components-next';
+import { Icon } from '@/components';
 import { MarkdownDisplay } from './MarkdownDisplay';
 import { TEXT_MAX_WIDTH } from '@/constants';
 

@@ -9,7 +9,7 @@ import {
 } from '@gorhom/bottom-sheet';
 import * as DropdownMenu from 'zeego/dropdown-menu';
 
-import { BottomSheetHeader, BottomSheetWrapper } from '@/components-next';
+import { BottomSheetHeader, BottomSheetWrapper } from '@/components';
 import { tailwind } from '@/theme';
 
 export type DashboardList = {

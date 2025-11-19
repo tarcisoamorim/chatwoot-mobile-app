@@ -11,7 +11,7 @@ import {
 import { useBottomSheetSpringConfigs } from '@gorhom/bottom-sheet';
 
 import { UpdateStatus } from '../UpdateStatus';
-import { BottomSheetBackdrop } from '@/components-next/common/bottomsheet/BottomSheetBackdrop';
+import { BottomSheetBackdrop } from '@/components/common/bottomsheet/BottomSheetBackdrop';
 import { useRefsContext, RefsProvider } from '@/context/RefsContext';
 import { tailwind } from '@/theme';
 import { initialState as defaultHeaderState } from '@/store/conversation/conversationHeaderSlice';

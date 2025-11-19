@@ -3,7 +3,7 @@ import { Controller, useForm } from 'react-hook-form';
 import { Animated, StatusBar, TextInput, View } from 'react-native';
 import * as Application from 'expo-application';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { Button, Icon } from '@/components-next';
+import { Button, Icon } from '@/components';
 import { URL_WITHOUT_HTTP_REGEX } from '@/constants';
 import { LinkIcon } from '@/svg-icons';
 import { tailwind } from '@/theme';

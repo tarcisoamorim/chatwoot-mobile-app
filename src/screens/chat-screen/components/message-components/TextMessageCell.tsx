@@ -3,7 +3,7 @@ import Animated, { FadeIn } from 'react-native-reanimated';
 import tailwind from 'twrnc';
 
 import { Channel, Message } from '@/types';
-import { Avatar } from '@/components-next/common';
+import { Avatar } from '@/components/common';
 
 import { ActivityTextCell } from './ActivityTextCell';
 import { BotTextCell } from './BotTextCell';

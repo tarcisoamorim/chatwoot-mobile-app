@@ -24,7 +24,7 @@ import {
   Button,
   Icon,
   AuthButton,
-} from '@/components-next';
+} from '@/components';
 import {
   selectInstallationUrl,
   selectBaseUrl,

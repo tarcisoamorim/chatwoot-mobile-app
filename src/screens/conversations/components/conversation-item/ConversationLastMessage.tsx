@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleProp, Text, ViewStyle } from 'react-native';
 
 import { tailwind } from '@/theme';
-import { NativeView } from '@/components-next/native-components';
+import { NativeView } from '@/components/native-components';
 import {
   AudioIcon,
   ImageAttachmentIcon,
@@ -10,7 +10,7 @@ import {
   PrivateNoteIcon,
   OutgoingIcon,
 } from '@/svg-icons';
-import { Icon } from '@/components-next';
+import { Icon } from '@/components';
 import { Message } from '@/types';
 import { MESSAGE_TYPES } from '@/constants';
 import i18n from '@/i18n';

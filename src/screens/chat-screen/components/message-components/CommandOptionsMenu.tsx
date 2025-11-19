@@ -11,7 +11,7 @@ import { useRefsContext } from '@/context';
 import { AttachFileIcon, CameraIcon, MacrosIcon, PhotosIcon } from '@/svg-icons';
 import { tailwind } from '@/theme';
 import { useHaptic, useScaleAnimation } from '@/utils';
-import { Icon } from '@/components-next/common';
+import { Icon } from '@/components/common';
 import { MAXIMUM_FILE_UPLOAD_SIZE } from '@/constants';
 import i18n from '@/i18n';
 import { showToast } from '@/utils/toastUtils';

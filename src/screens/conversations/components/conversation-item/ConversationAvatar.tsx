@@ -3,8 +3,8 @@ import { ImageURISource } from 'react-native';
 import { LinearTransition } from 'react-native-reanimated';
 import { isEqual } from 'lodash';
 
-import { Avatar, AvatarStatusType } from '@/components-next/common';
-import { AnimatedNativeView } from '@/components-next/native-components';
+import { Avatar, AvatarStatusType } from '@/components/common';
+import { AnimatedNativeView } from '@/components/native-components';
 import { tailwind } from '@/theme';
 import { AvailabilityStatus } from '@/types';
 

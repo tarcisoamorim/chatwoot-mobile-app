@@ -12,7 +12,7 @@ import { useBottomSheetSpringConfigs } from '@gorhom/bottom-sheet';
 
 import { UpdateLabels } from '../UpdateLabels';
 
-import { BottomSheetBackdrop } from '@/components-next/common/bottomsheet/BottomSheetBackdrop';
+import { BottomSheetBackdrop } from '@/components/common/bottomsheet/BottomSheetBackdrop';
 import { useRefsContext, RefsProvider } from '@/context/RefsContext';
 import { tailwind } from '@/theme';
 import { initialState as defaultHeaderState } from '@/store/conversation/conversationHeaderSlice';

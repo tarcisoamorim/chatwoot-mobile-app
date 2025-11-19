@@ -1,7 +1,7 @@
 import React from 'react';
 import { Pressable } from 'react-native';
 import Animated from 'react-native-reanimated';
-import { Icon } from '@/components-next';
+import { Icon } from '@/components';
 import { CaretRight, PriorityIcon, NoPriorityIcon } from '@/svg-icons';
 import { tailwind } from '@/theme';
 import { ConversationPriority } from '@/types';

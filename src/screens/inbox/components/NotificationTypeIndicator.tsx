@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { tailwind } from '@/theme';
-import { Icon } from '@/components-next';
+import { Icon } from '@/components';
 import Animated from 'react-native-reanimated';
 import {
   NotificationMentionIcon,

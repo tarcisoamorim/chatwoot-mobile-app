@@ -10,7 +10,7 @@ import { useBottomSheetSpringConfigs } from '@gorhom/bottom-sheet';
 
 import { BottomSheetHeader } from './BottomSheetHeader';
 import { BottomSheetBackdrop } from './BottomSheetBackdrop';
-import { Button, LanguageList } from '@/components-next';
+import { Button, LanguageList } from '@/components';
 import { tailwind } from '@/theme';
 import { useRefsContext, RefsProvider } from '@/context/RefsContext';
 

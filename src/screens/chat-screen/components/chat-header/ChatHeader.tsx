@@ -3,9 +3,9 @@ import { ImageSourcePropType, Keyboard, Platform, Pressable } from 'react-native
 import { BottomSheetModal, useBottomSheetSpringConfigs } from '@gorhom/bottom-sheet';
 import Animated from 'react-native-reanimated';
 
-import { Avatar, Icon } from '@/components-next';
+import { Avatar, Icon } from '@/components';
 import { ChevronLeft, OpenIcon, Overflow, ResolvedIcon, SLAIcon } from '@/svg-icons';
-import { BottomSheetBackdrop, BottomSheetWrapper } from '@/components-next';
+import { BottomSheetBackdrop, BottomSheetWrapper } from '@/components';
 import { tailwind } from '@/theme';
 import { ChatDropdownMenu, DashboardList } from './DropdownMenu';
 import { SLAEvent } from '@/types/common';

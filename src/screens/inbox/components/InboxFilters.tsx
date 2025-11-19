@@ -6,7 +6,7 @@ import { useRefsContext } from '@/context';
 import { TickIcon } from '@/svg-icons';
 import { tailwind } from '@/theme';
 import { useHaptic } from '@/utils';
-import { BottomSheetHeader, Icon } from '@/components-next';
+import { BottomSheetHeader, Icon } from '@/components';
 import i18n from '@/i18n';
 import { InboxSortTypes, InboxSortOptions } from '@/store/notification/notificationTypes';
 import { selectSortOrder, setFilters } from '@/store/notification/notificationFilterSlice';

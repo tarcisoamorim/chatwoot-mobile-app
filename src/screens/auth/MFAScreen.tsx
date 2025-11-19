@@ -3,9 +3,9 @@ import { Animated, StatusBar, View, TextInput, Text, Pressable, ScrollView } fro
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useSharedValue } from 'react-native-reanimated';
 import { useNavigation } from '@react-navigation/native';
-import { Button, VerificationCode } from '@/components-next';
-import { useAnimatedShake } from '@/components-next/verification-code/hooks/use-animated-shake';
-import type { StatusType } from '@/components-next/verification-code';
+import { Button, VerificationCode } from '@/components';
+import { useAnimatedShake } from '@/components/verification-code/hooks/use-animated-shake';
+import type { StatusType } from '@/components/verification-code';
 import { tailwind } from '@/theme';
 import { useAppDispatch, useAppSelector } from '@/hooks';
 import { resetSettings } from '@/store/settings/settingsSlice';

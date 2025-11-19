@@ -6,7 +6,7 @@ import { useRefsContext } from '@/context';
 import { TickIcon } from '@/svg-icons';
 import { tailwind } from '@/theme';
 import { useHaptic } from '@/utils';
-import { BottomSheetHeader, Icon } from '@/components-next/common';
+import { BottomSheetHeader, Icon } from '@/components/common';
 import { selectFilters, setFilters } from '@/store/conversation/conversationFilterSlice';
 import { useAppDispatch, useAppSelector } from '@/hooks';
 import { selectAllInboxes } from '@/store/inbox/inboxSelectors';

@@ -3,13 +3,13 @@ import { BottomSheetScrollView } from '@gorhom/bottom-sheet';
 
 import { useRefsContext } from '@/context';
 import { tailwind } from '@/theme';
-import { SearchBar } from '@/components-next';
+import { SearchBar } from '@/components';
 import { useAppDispatch, useAppSelector } from '@/hooks';
 import { filterLabels } from '@/store/label/labelSelectors';
 import { Label } from '@/types/common/Label';
 import { selectSelectedIds } from '@/store/conversation/conversationSelectedSlice';
 import { conversationActions } from '@/store/conversation/conversationActions';
-import { LabelCell } from '@/components-next/label-section';
+import { LabelCell } from '@/components/label-section';
 import i18n from '@/i18n';
 
 type LabelStackProps = {

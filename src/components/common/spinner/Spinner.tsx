@@ -13,7 +13,7 @@ import tailwind from 'twrnc';
 
 import { LoadingIcon } from '@/svg-icons';
 import { withAnchorPoint } from '@/utils';
-import { Icon } from '@/components-next';
+import { Icon } from '@/components';
 
 interface SpinnerProps extends Pick<ViewProps, 'style'> {
   size: number;

@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { useAppSelector, useAppDispatch } from '@/hooks';
 import { useChatWindowContext } from '@/context';
 import { AppState, Platform } from 'react-native';
@@ -148,20 +148,24 @@ export const MessagesListContainer = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const groupedMessages = getGroupedMessages(messages);
+  // Memoize expensive message grouping computation to prevent recalculation on every render
+  // This optimization is critical for performance with 100+ messages in the list
+  const messagesWithGrouping = useMemo(() => {
+    const groupedMessages = getGroupedMessages(messages);
 
-  const allMessages = flatMap(groupedMessages, section => [
-    ...section.data,
-    { date: section.date },
-  ]);
+    const allMessages = flatMap(groupedMessages, section => [
+      ...section.data,
+      { date: section.date },
+    ]);
 
-  const messagesWithGrouping = allMessages.map((message, index) => {
-    return {
-      ...message,
-      groupWithNext: shouldGroupWithNext(index, allMessages as MessageOrDate[]),
-      groupWithPrevious: shouldGroupWithNext(index - 1, allMessages as MessageOrDate[]),
-    };
-  });
+    return allMessages.map((message, index) => {
+      return {
+        ...message,
+        groupWithNext: shouldGroupWithNext(index, allMessages as MessageOrDate[]),
+        groupWithPrevious: shouldGroupWithNext(index - 1, allMessages as MessageOrDate[]),
+      };
+    });
+  }, [messages]);
 
   const { inboxId } = conversation || {};
   const inbox = useAppSelector(state => (inboxId ? selectInboxById(state, inboxId) : undefined));

@@ -17,7 +17,7 @@ import Svg, { Path, Rect } from 'react-native-svg';
 
 import { useChatWindowContext } from '@/context';
 import { tailwind } from '@/theme';
-import { Icon } from '@/components-next/common';
+import { Icon } from '@/components/common';
 import { useAppDispatch, useAppSelector } from '@/hooks';
 
 import { MentionInput, MentionSuggestionsProps, Suggestion } from './mentions-input';

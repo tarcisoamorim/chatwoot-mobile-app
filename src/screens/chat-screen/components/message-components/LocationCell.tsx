@@ -5,7 +5,7 @@ import Animated, { Easing, FadeIn } from 'react-native-reanimated';
 import { tailwind } from '@/theme';
 import { Channel, Message, MessageStatus, UnixTimestamp } from '@/types';
 import { unixTimestampToReadableTime } from '@/utils';
-import { Avatar, Icon } from '@/components-next/common';
+import { Avatar, Icon } from '@/components/common';
 import { MenuOption, MessageMenu } from '../message-menu';
 import { MESSAGE_STATUS, MESSAGE_TYPES, TEXT_MAX_WIDTH } from '@/constants';
 import { DeliveryStatus } from './DeliveryStatus';

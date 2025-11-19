@@ -7,7 +7,7 @@ import { useRefsContext } from '@/context';
 import { tailwind } from '@/theme';
 import { ConversationPriority, PriorityOptions } from '@/types';
 import { getPriorityIcon, useHaptic } from '@/utils';
-import { BottomSheetHeader, Icon } from '@/components-next';
+import { BottomSheetHeader, Icon } from '@/components';
 import { useAppDispatch, useAppSelector } from '@/hooks';
 import { selectSelectedConversation } from '@/store/conversation/conversationSelectedSlice';
 import { conversationActions } from '@/store/conversation/conversationActions';

@@ -21,7 +21,7 @@ import { conversationActions } from '@/store/conversation/conversationActions';
 import { selectAllLabels } from '@/store/label/labelSelectors';
 
 import { isContactTyping, getLastMessage, getTypingUsersText } from '@/utils';
-import { Icon, Swipeable } from '@/components-next/common';
+import { Icon, Swipeable } from '@/components/common';
 
 import { ConversationItem } from './ConversationItem';
 import { MarkAsUnRead, StatusIcon } from '@/svg-icons';

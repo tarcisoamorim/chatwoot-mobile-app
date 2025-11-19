@@ -35,7 +35,7 @@ import {
   NotificationPreferences,
   SwitchAccount,
   SettingsList,
-} from '@/components-next';
+} from '@/components';
 import { UserAvatar } from './components/UserAvatar';
 
 import { LANGUAGES, TAB_BAR_HEIGHT } from '@/constants';

@@ -1,11 +1,11 @@
 import React from 'react';
 import Animated from 'react-native-reanimated';
-import { Avatar } from '@/components-next';
+import { Avatar } from '@/components';
 import { tailwind } from '@/theme';
 import type { NotificationType } from '@/types/Notification';
 import { ConversationPriority } from '@/types/common';
-import { AnimatedNativeView, NativeView } from '@/components-next/native-components';
-import { PriorityIndicator, ChannelIndicator } from '@/components-next/list-components';
+import { AnimatedNativeView, NativeView } from '@/components/native-components';
+import { PriorityIndicator, ChannelIndicator } from '@/components/list-components';
 
 import { Inbox } from '@/types/Inbox';
 import { ConversationAdditionalAttributes } from '@/types/Conversation';

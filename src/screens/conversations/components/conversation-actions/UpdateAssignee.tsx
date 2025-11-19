@@ -6,7 +6,7 @@ import { BottomSheetScrollView } from '@gorhom/bottom-sheet';
 import { useRefsContext } from '@/context';
 import { tailwind } from '@/theme';
 import { Agent } from '@/types';
-import { Avatar, Icon, SearchBar } from '@/components-next';
+import { Avatar, Icon, SearchBar } from '@/components';
 import { SelfAssign, TickIcon } from '@/svg-icons';
 
 import { assignableAgentActions } from '@/store/assignable-agent/assignableAgentActions';

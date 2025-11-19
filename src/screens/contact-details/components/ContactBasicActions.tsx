@@ -2,7 +2,7 @@ import React from 'react';
 import { Dimensions, Pressable } from 'react-native';
 import Animated from 'react-native-reanimated';
 
-import { Icon, IconButton } from '@/components-next';
+import { Icon, IconButton } from '@/components';
 
 import { MailIcon, PhoneIcon } from '@/svg-icons';
 import { tailwind } from '@/theme';

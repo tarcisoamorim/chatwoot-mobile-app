@@ -14,7 +14,7 @@ import { Image } from 'expo-image';
 import { AttachFileIcon } from '@/svg-icons';
 import { tailwind } from '@/theme';
 import { useScaleAnimation } from '@/utils';
-import { Icon } from '@/components-next/common';
+import { Icon } from '@/components/common';
 import { useAppDispatch, useAppSelector } from '@/hooks';
 import { selectAttachments, deleteAttachment } from '@/store/conversation/sendMessageSlice';
 

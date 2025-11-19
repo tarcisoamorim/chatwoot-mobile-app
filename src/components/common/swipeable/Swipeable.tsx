@@ -20,7 +20,7 @@ import Animated, {
 
 import { tailwind } from '@/theme';
 import { useHaptic } from '@/utils';
-import { AnimatedNativeView } from '@/components-next/native-components';
+import { AnimatedNativeView } from '@/components/native-components';
 
 const WIDTH = Dimensions.get('screen').width;
 

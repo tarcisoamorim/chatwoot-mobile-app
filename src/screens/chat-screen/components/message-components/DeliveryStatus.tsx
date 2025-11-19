@@ -2,10 +2,10 @@ import React from 'react';
 import { Pressable } from 'react-native';
 import { BottomSheetModal, useBottomSheetSpringConfigs } from '@gorhom/bottom-sheet';
 
-import { BottomSheetBackdrop, BottomSheetWrapper } from '@/components-next';
+import { BottomSheetBackdrop, BottomSheetWrapper } from '@/components';
 import { tailwind } from '@/theme';
 import { DoubleCheckIcon, WarningIcon, MessagePendingIcon } from '@/svg-icons';
-import { Icon } from '@/components-next/common';
+import { Icon } from '@/components/common';
 import { MessageStatus, MessageType } from '@/types';
 import { Channel } from '@/types';
 import { INBOX_TYPES, MESSAGE_TYPES, MESSAGE_STATUS } from '@/constants';

@@ -2,7 +2,7 @@
 import React, { memo } from 'react';
 import { ImageURISource } from 'react-native';
 
-import { NativeView } from '@/components-next/native-components';
+import { NativeView } from '@/components/native-components';
 import { tailwind } from '@/theme';
 import {
   Agent,

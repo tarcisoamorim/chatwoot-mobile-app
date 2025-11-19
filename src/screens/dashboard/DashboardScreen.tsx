@@ -6,7 +6,7 @@ import snakecaseKeys from 'snakecase-keys';
 
 import { StackActions, useNavigation, useRoute } from '@react-navigation/native';
 
-import { Icon } from '@/components-next';
+import { Icon } from '@/components';
 import { CloseIcon } from '@/svg-icons';
 import { tailwind } from '@/theme';
 import { Conversation } from '@/types';

@@ -11,7 +11,7 @@ import {
 import * as ContextMenu from 'zeego/context-menu';
 
 import { tailwind } from '@/theme';
-import { BottomSheetHeader, BottomSheetWrapper, Icon } from '@/components-next/common';
+import { BottomSheetHeader, BottomSheetWrapper, Icon } from '@/components/common';
 
 export type MenuOption = {
   title: string;

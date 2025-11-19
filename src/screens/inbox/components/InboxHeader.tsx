@@ -3,9 +3,9 @@ import { Pressable } from 'react-native';
 import Animated from 'react-native-reanimated';
 import { BottomSheetModal, useBottomSheetSpringConfigs } from '@gorhom/bottom-sheet';
 
-import { BottomSheetBackdrop, BottomSheetWrapper } from '@/components-next';
+import { BottomSheetBackdrop, BottomSheetWrapper } from '@/components';
 
-import { Icon } from '@/components-next/common/icon';
+import { Icon } from '@/components/common/icon';
 import { DoubleCheckIcon, InboxFilterIcon } from '@/svg-icons';
 import { tailwind } from '@/theme';
 import { InboxFilters } from './InboxFilters';

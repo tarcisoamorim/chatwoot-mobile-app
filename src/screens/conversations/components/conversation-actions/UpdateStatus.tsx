@@ -7,7 +7,7 @@ import { useRefsContext } from '@/context';
 import { tailwind } from '@/theme';
 import { ConversationStatus, StatusCollection } from '@/types';
 import { getStatusTypeIcon, useHaptic } from '@/utils';
-import { BottomSheetHeader, Icon } from '@/components-next';
+import { BottomSheetHeader, Icon } from '@/components';
 import { useAppDispatch, useAppSelector } from '@/hooks';
 import {
   selectSelectedConversation,

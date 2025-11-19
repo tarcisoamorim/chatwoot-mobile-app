@@ -8,7 +8,7 @@ import { PrivateTextCell } from './PrivateTextCell';
 import { MESSAGE_TYPES } from '@/constants';
 import { Email } from './Email';
 import { tailwind } from '@/theme';
-import { Avatar } from '@/components-next';
+import { Avatar } from '@/components';
 
 export type EmailMessageCellProps = {
   item: Message;

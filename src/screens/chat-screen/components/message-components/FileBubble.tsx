@@ -6,8 +6,8 @@ import RNFetchBlob from 'rn-fetch-blob';
 
 import { FileIcon } from '@/svg-icons';
 import { tailwind } from '@/theme';
-import { Icon } from '@/components-next/common';
-import { Spinner } from '@/components-next/spinner';
+import { Icon } from '@/components/common';
+import { Spinner } from '@/components/spinner';
 import { MESSAGE_VARIANTS } from '@/constants';
 
 const generateUniqueFileName = (url: string, originalFileName: string) => {

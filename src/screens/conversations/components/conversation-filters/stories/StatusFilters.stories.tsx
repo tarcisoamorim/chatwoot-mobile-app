@@ -13,7 +13,7 @@ import { useBottomSheetSpringConfigs } from '@gorhom/bottom-sheet';
 import { StatusFilters } from '../StatusFilters';
 import { defaultFilterState } from '@/store/conversation/conversationFilterSlice';
 
-import { BottomSheetBackdrop } from '@/components-next/common/bottomsheet/BottomSheetBackdrop';
+import { BottomSheetBackdrop } from '@/components/common/bottomsheet/BottomSheetBackdrop';
 import { useRefsContext, RefsProvider } from '@/context/RefsContext';
 import { tailwind } from '@/theme';
 import { ConversationFilterOptions } from '@/types';

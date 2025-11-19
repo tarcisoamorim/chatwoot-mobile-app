@@ -3,7 +3,7 @@ import { Text } from 'react-native';
 import Animated from 'react-native-reanimated';
 
 import { tailwind } from '@/theme';
-import { Icon } from '@/components-next/common';
+import { Icon } from '@/components/common';
 
 import { MESSAGE_VARIANTS } from '@/constants';
 import { MapIcon } from '@/svg-icons';

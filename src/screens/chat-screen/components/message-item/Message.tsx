@@ -36,7 +36,7 @@ import { CopyIcon, Trash } from '@/svg-icons';
 import { MenuOption, MessageMenu } from '../message-menu';
 import { tailwind } from '@/theme';
 import { Dimensions, View } from 'react-native';
-import { Avatar } from '@/components-next';
+import { Avatar } from '@/components';
 
 // import { ImageMetadata } from '@/types';
 
@@ -190,7 +190,42 @@ const MessageWrapper = ({
   );
 };
 
-export const MessageComponent = (props: MessageComponentProps) => {
+/**
+ * Custom comparison function for MessageComponent memoization
+ * Only re-render when message content, status, or critical props change
+ * This is crucial for performance with 100+ messages in the list
+ */
+const arePropsEqual = (prevProps: MessageComponentProps, nextProps: MessageComponentProps) => {
+  const prevItem = prevProps.item;
+  const nextItem = nextProps.item;
+
+  // If message ID changed, definitely re-render
+  if (prevItem.id !== nextItem.id) return false;
+
+  // Check critical message properties that affect visual rendering
+  if (prevItem.content !== nextItem.content) return false;
+  if (prevItem.status !== nextItem.status) return false;
+  if (prevItem.private !== nextItem.private) return false;
+  if (prevItem.messageType !== nextItem.messageType) return false;
+  if (prevItem.contentType !== nextItem.contentType) return false;
+
+  // Check grouping properties (affects message bubble shape)
+  if (prevItem.groupWithNext !== nextItem.groupWithNext) return false;
+  if (prevItem.groupWithPrevious !== nextItem.groupWithPrevious) return false;
+
+  // Check attachments (shallow comparison is enough - array reference changes when modified)
+  if (prevItem.attachments !== nextItem.attachments) return false;
+
+  // Check context props
+  if (prevProps.isEmailInbox !== nextProps.isEmailInbox) return false;
+  if (prevProps.currentUserId !== nextProps.currentUserId) return false;
+  if (prevProps.index !== nextProps.index) return false;
+
+  // All critical props are equal, skip re-render
+  return true;
+};
+
+const MessageComponentInternal = (props: MessageComponentProps) => {
   const dispatch = useAppDispatch();
   const { conversationId } = useChatWindowContext();
   const { item, currentUserId, isEmailInbox } = props;
@@ -412,3 +447,7 @@ export const MessageComponent = (props: MessageComponentProps) => {
 
   return renderMessageContent();
 };
+
+// Export memoized version to prevent unnecessary re-renders in FlashList
+// This dramatically improves performance when typing in ReplyBox or when context updates
+export const MessageComponent = React.memo(MessageComponentInternal, arePropsEqual);
